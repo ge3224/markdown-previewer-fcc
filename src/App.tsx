@@ -50,7 +50,7 @@ export default function App() {
             value={markdown}
           />
         </div>
-        <div className="h-full w-full overflow-y-auto border border-slate-400 text-lime-500">
+        <div className="prose h-full min-w-full overflow-y-auto border border-slate-400 text-lime-300 prose-headings:text-lime-300 prose-a:text-teal-300 prose-a:underline prose-blockquote:text-lime-300 prose-strong:text-lime-300 prose-code:text-slate-100 prose-pre:text-slate-100">
           {/* User Story #2: I can see an element with a corresponding id="preview". */}
           <div className="w-full p-4" id="preview">
             {/*User Story #3: When I enter text into the #editor element, the #preview element is updated as I type to display the content of the textarea.*/}
