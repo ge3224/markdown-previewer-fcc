@@ -38,10 +38,22 @@ export default function App() {
     setMarkdown(e.currentTarget.value);
   };
 
+  // const parseMarkdown = (input: string): string => {
+  //   marked
+  //     .parse(input)
+  //     .then((html) => {
+  //       return DOMPurify.sanitize(html);
+  //     })
+  //     .catch((error) => {
+  //       console.error((error as Error).message);
+  //       return "";
+  //     });
+  // };
+
   return (
     <main className="flex h-screen min-h-screen w-full flex-col justify-center bg-slate-900 px-8 pb-8 pt-14">
-      <div className="flex min-h-[80lvh] w-full grow-0 flex-col justify-center gap-2 lg:grid lg:grid-cols-2">
-        <div className="w-full border border-slate-400 text-red-500">
+      <div className="grid min-h-[80lvh] w-full grow-0 grid-cols-1 grid-rows-2 flex-col justify-center gap-2 lg:grid-cols-2 lg:grid-rows-1">
+        <div className="w-full border border-slate-500 text-slate-400">
           {/*User Story #1: I can see a textarea element with a corresponding id="editor".*/}
           <textarea
             className="min-h-full w-full bg-slate-900 p-4"
@@ -50,7 +62,7 @@ export default function App() {
             value={markdown}
           />
         </div>
-        <div className="prose h-full min-w-full overflow-y-auto border border-slate-400 text-lime-300 prose-headings:text-lime-300 prose-a:text-teal-300 prose-a:underline prose-blockquote:text-lime-300 prose-strong:text-lime-300 prose-code:text-slate-100 prose-pre:text-slate-100">
+        <div className="prose w-full min-w-full overflow-y-auto border border-slate-500 text-lime-300 prose-headings:text-lime-300 prose-a:text-teal-300 prose-a:underline prose-blockquote:text-lime-300 prose-strong:text-lime-300 prose-code:text-slate-100 prose-pre:text-slate-100 lg:min-w-full">
           {/* User Story #2: I can see an element with a corresponding id="preview". */}
           <div className="w-full p-4" id="preview">
             {/*User Story #3: When I enter text into the #editor element, the #preview element is updated as I type to display the content of the textarea.*/}
